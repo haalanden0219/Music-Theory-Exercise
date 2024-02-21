@@ -1,1 +1,1 @@
-# Music-Theory-Exercise
+# Music Theory Exercise
