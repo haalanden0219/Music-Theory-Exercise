@@ -17,16 +17,16 @@ Project created to help a user be able to quickly identify the notes of diatonic
 - Download imported libraries if not already installed
 
 ### Executing Program
-- Running with no flags will print a random scale with a random root note.
-``` python DSMTT.py ```
-- Running with the note and/or --scale commands will let you choose a scale and root note.
-``` python DSMTT.py --note C --scale Major```
-- Running with the -t flag will put you into test mode.
-``` python DSMTT.py -t ```
+- Running with no flags will print a random scale with a random root note. </br>
+``` python DSMTT.py ``` </br>
+- Running with the note and/or --scale commands will let you choose a scale and root note. </br>
+``` python DSMTT.py --note C --scale Major``` </br>
+- Running with the -t flag will put you into test mode. </br>
+``` python DSMTT.py -t ``` </br>
 
 ## Help
-- Run code below for further help
- ```python DSMTT.py -h```
+- Run code below for further help </br>
+ ```python DSMTT.py -h``` </br>
 
 ## Future Goals
 - Create a gui executable for ease of access for non-programmers.
