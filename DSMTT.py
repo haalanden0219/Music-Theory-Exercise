@@ -107,9 +107,8 @@ def main():
         parser.add_argument("-t" ,"--test", action="store_true", help="Enables test mode")
 
         args = parser.parse_args()
-    
-        if args.note and args.scale:
-            try: 
+        try:  
+            if args.note and args.scale:
                 if ((args.note.upper() in notes_sharp) and (args.scale.upper() in types_of_scales)): 
                     if args.test:
                         test_scale(args.note , args.scale)
@@ -117,11 +116,7 @@ def main():
                         print_scales(args.note , args.scale)
                 else:
                     print("Invalid Note and/or Scale")
-            except Exception as e:
-                print("An exception occurred:", str(e))
-
-        elif args.note:        
-            try: 
+            elif args.note:        
                 if (args.note.upper() in notes_sharp ): 
                     random_scale = random.choice(types_of_scales)
                     if args.test:
@@ -130,12 +125,7 @@ def main():
                         print_scales(args.note , random_scale)
                 else:
                     print(args.note, "is not a valid note")
-            
-            except Exception as e:
-                print("An exception occurred:", str(e))
-
-        elif args.scale: 
-            try: 
+            elif args.scale: 
                 if (args.scale.upper() in types_of_scales ): 
                     random_note = random.choice(notes_sharp)
                     if args.test:
@@ -144,17 +134,15 @@ def main():
                         print_scales(random_note , args.scale)
                 else:
                     print(args.scale, "is not a valid scale")
-            
-            except Exception as e:
-                print("An exception occurred:", str(e))
-
-        else:
-            random_note = random.choice(notes_sharp)
-            random_scale = random.choice(types_of_scales)
-            if args.test:
-                test_scale(random_note, random_scale)
             else:
-                print_scales(random_note, random_scale)
+                random_note = random.choice(notes_sharp)
+                random_scale = random.choice(types_of_scales)
+                if args.test:
+                    test_scale(random_note, random_scale)
+                else:
+                    print_scales(random_note, random_scale)
+        except Exception as e:
+            print("An exception occurred:", str(e))
     except KeyboardInterrupt:
         print("\nKeyboardInterrupt detected. Exiting program.")
 if __name__ == "__main__":
