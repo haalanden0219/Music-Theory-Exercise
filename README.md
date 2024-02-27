@@ -29,11 +29,11 @@ Project created to help a user be able to quickly identify the notes of diatonic
  ```python DSMTT.py -h```
 
 ## Future Goals
-- Create a gui() executable for ease of access for non-programmers.
+- Create a gui executable for ease of access for non-programmers.
 - Add a feature to test the 7 modes along side the scales.
 - Implement an option to use flat notes instead of sharp.
 
 
 ## Authors
-[Evan Haaland] (https://www.linkedin.com/in/evannhaaland/)
+[Evan Haaland](https://www.linkedin.com/in/evannhaaland/) </br>
 Connor Kreitzman
